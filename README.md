@@ -1,7 +1,14 @@
 # MagicMirror_config
 Konffitiedostot MagicMirror (https://magicmirror.builders) projektiin. Toimii myös infoscreeninä esim. Raspberry Pi virallisen näytön kanssa.
 
+### TODO 
 
+- [ ] näytön ajastus pois yön ajaksi
+- [ ] possibly kellon ja weathernowforecast fonttia isommaks
+- [ ] Philips Hue integrointi
+- [ ] dokumentaation parantaminen
+- [x] MMM-Hsl-stops HTTP korjaaminen
+- [x] Spotify UI
 
 ## Setup
 Asennettu viimeisin Raspbian Stretch with Desktop, ei recommended software https://www.raspberrypi.org/downloads/raspbian/.
@@ -201,12 +208,6 @@ Halutaan vain IPv4 osoite
                         }
                 },
 ```
-__________
-TODO 
-
-- näytön ajastus pois yön ajaksi
-- possibly kellon ja weathernowforecast fonttia isommaks
-- herpsderps
 
 ## Kuva
 ![Kuva käyttöliittymästä 1680x1050 resoluutioisella näytöllä](Esimerkki.png)
