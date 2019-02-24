@@ -143,7 +143,7 @@ nano css/styles
 display: none;
 ```
 
-- Spotifyn modulen ulkonäön muokkailua käyttämällä käyttäjän "XusBadia" luomaa ulkonäköä.  "XusBadin" julkaisemaan ulkonäköön pääsee tästä (https://github.com/raywo/MMM-NowPlayingOnSpotify/issues/27). Koodin voi suoraan kopioida ~/MagicMirror/css/cusotm.css ja ulkonäkö vaihtuu  refreshin jälkeen. 
+- Spotifyn modulen ulkonäön muokkailua käyttämällä käyttäjän "XusBadia" luomaa ulkonäköä.  "XusBadin" julkaisemaan ulkonäköön pääsee tästä (https://github.com/raywo/MMM-NowPlayingOnSpotify/issues/27). Koodin voi suoraan kopioida ~/MagicMirror/css/custom.css ja ulkonäkö vaihtuu  refreshin jälkeen. 
 - Ulkonäköä tuli muokattua tyydyttämään omaa makua. Muutoksiin kuului artistin ja kappaleen nimen suurennusta sekä aikapalkin pyöristymistä.
 - HUOM. Kappaleen vaihtuessa levykannen vaihtuminen voi kestää, jolloin koko module voi "hyppää ylöspäin" kun levykannen kuva puuttuu, mutta palaa takaisin kohdalleen kun levykansi kuva on ladattu. 
 ### Konffi
