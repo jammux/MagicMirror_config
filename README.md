@@ -12,7 +12,7 @@ Raspbian-configilla vaihdetaan kieliasetukset kuntoon, vaihdetaan salasana(tai `
 Oletuksena käyttäjänä on pi ja salasana raspberry (:D).
 
 Päivitetään Raspbian
-```
+```bash
 sudo apt update
 sudo apt upgrade 
 ```
@@ -26,7 +26,7 @@ Ladattu MagicMirror2 käyttäen skriptiä https://magicmirror.builders/.
 Kokeiltu summamutikassa https://www.raspberrypi.org/forums/viewtopic.php?f=91&t=57552.
 
 Kopioi repon file lightdm.conf polkuun /etc/lightdm/lightdm.conf TAI lisää itse puuttuva rivi [Seat:*] alle
-```
+```bash
 sudo cp lightdm.conf /etc/lightdm/lightdm.conf
 #TAI lisää itse rivi samaan tiedostoon [Seat:*] alle:
 xserver-command=X -s 0 dpms
@@ -37,7 +37,7 @@ JA reboot.
 
 Ladattu HSL moduuli https://github.com/0EQUALIZERO/MMM-Hsl-stops.
 - korjattu ikonit toimimaan korjaamalla hsl_stops.js (LISÄTTY REPOON 24.2.2019) 
-```
+```bash
 cd ~/MagicMirror/modules
 git clone https://github.com/0EQUALIZERO/MMM-Hsl-stops.git
 cd MMM-Hsl-stops
@@ -119,3 +119,6 @@ TODO
 - spotify presonal tweak (UI styling)
 - possibly kellon ja weathernowforecast fonttia isommaks
 - herpsderps
+
+## Kuva
+![Kuva käyttöliittymästä 1680x1050 resoluutioisella näytöllä](Esimerkki.png)
