@@ -1,5 +1,5 @@
 # MagicMirror_config
-Konffitiedostot MagicMirror projektiin. Toimii myös infoscreeninä esim. Raspberry Pi virallisen näytön kanssa.
+Konffitiedostot MagicMirror (https://magicmirror.builders) projektiin. Toimii myös infoscreeninä esim. Raspberry Pi virallisen näytön kanssa.
 
 
 
@@ -48,7 +48,7 @@ JA reboot.
 
 ### HSL pysäkit
 
-Ladattu HSL moduuli https://github.com/0EQUALIZERO/MMM-Hsl-stops.
+Näyttää oman pysäkin lähtöajat reaaliajassa. Ladattu HSL moduuli https://github.com/0EQUALIZERO/MMM-Hsl-stops.
 - korjattu ikonit toimimaan korjaamalla hsl_stops.js (LISÄTTY REPOON 24.2.2019) 
 ```bash
 cd ~/MagicMirror/modules
@@ -57,7 +57,7 @@ cd MMM-Hsl-stops
 npm install
 ```
 #### Konffi
-- konfiguroitu käyttämään koko suomen reittiopasta HSL sijasta (kts. konffi)
+- konfiguroitu käyttämään koko suomen reittiopasta HSL sijasta (kts. konffi), [alkuperäinen PR](https://github.com/0EQUALIZERO/MMM-Hsl-stops/pull/3)
 - oman pysäkin löytää https://beta.digitransit.fi kaivamalla oma pysäkki ja ottamalla pysäkin URLista numero %3A jälkeen
 ```
                 {
@@ -200,7 +200,6 @@ Halutaan vain IPv4 osoite
 ```
 __________
 TODO 
-- korjattava HSL moduulin ajat sekä HTTP-ongelma (https://github.com/0EQUALIZERO/MMM-Hsl-stops/pull/2)
 - spotify presonal tweak (UI styling)
 - näytön ajastus pois yön ajaksi
 - possibly kellon ja weathernowforecast fonttia isommaks
