@@ -69,6 +69,30 @@ npm install
 ```
 
 ### IP:n näyttäminen ruudulla
+=======
+### Spotify Tweaking
+
+Spotify UI paranneltu kun module ei ole käytössä 
+- Modulen käynnistyksen aikana oleva logo poistettu
+```
+cd ~/MagicMirror/modules/MMM-NowPlayingOnSpotify/css 
+nano css/styles
+```
+```css
+#.NPOS_initContent
+display: none;
+
+#.NPOS_loading
+display: none;
+```	
+
+- Module ei käytössä logo poistetu
+```
+cd ~/MagicMirror/modules/MMM-NowPlayingOnSpotify/css 
+nano css/styles
+#.NPOS_nothingIsPlayingContent
+display: none;
+```
 
 IP:n kaivaminen on aika aamuinen homma, joten kiva olisi näyttää sitä näytöllä omalla modulellaan.
 Ladattu MMM-ip (https://github.com/fewieden/MMM-ip) ja asetettu seuraava konffiin.
