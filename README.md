@@ -57,7 +57,7 @@ cd MMM-Hsl-stops
 npm install
 ```
 #### Konffi
-- konfiguroitu käyttämään koko suomen reittiopasta HSL sijasta (kts. konffi)
+- konfiguroitu käyttämään koko suomen reittiopasta HSL sijasta (kts. konffi), [alkuperäinen PR](https://github.com/0EQUALIZERO/MMM-Hsl-stops/pull/3)
 - oman pysäkin löytää https://beta.digitransit.fi kaivamalla oma pysäkki ja ottamalla pysäkin URLista numero %3A jälkeen
 ```
                 {
