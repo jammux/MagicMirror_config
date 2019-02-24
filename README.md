@@ -142,6 +142,40 @@ nano css/styles
 #.NPOS_nothingIsPlayingContent
 display: none;
 ```
+
+- Spotifyn modulen ulkonäön muokkailua käyttämällä käyttäjän "XusBadia" luomaa ulkonäköä.  "XusBadin" julkaisemaan ulkonäköön pääsee tästä (https://github.com/raywo/MMM-NowPlayingOnSpotify/issues/27). Koodin voi suoraan kopioida ~/MagicMirror/css/cusotm.css ja ulkonäkö vaihtuu  refeshin jälkeen. 
+- Ulkonäköä tuli muokattua tyydyttämään omaa makua. Muutoksiin kuuluui artistin ja kappaleen nimen suurennusta sekä aikapalkin pyöristymistä.
+
+### Konffi
+Omat muutokset alkuperäiseen koodiin.
+```css  
+#Kappaleen nimen suurennus
+        
+        .NPOS_infoText:nth-child(2){
+        font-weight: 600;
+        font-size: 150%;
+        margin-bottom: 5px;
+        }
+
+#Artistin nimen suurennus
+        
+        .NPOS_infoText:nth-child(3){
+        font-weight: 400;
+        font-size: larger;
+        }
+
+#Aikapalkin pyöristäminen
+
+        progress.NPOS_progress::-webkit-progress-value{
+        border-radius: 4px;
+        }
+
+```
+
+Modulen ulkonäkö muutosten jälkeen
+
+![Kuva muokatusta Spotify Nyt Soi modulesta](spotify.jpg)
+
 ### IP:n näyttäminen ruudulla
 
 IP:n kaivaminen on aika aamuinen homma, joten kiva olisi näyttää sitä näytöllä omalla modulellaan.
