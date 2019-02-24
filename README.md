@@ -5,7 +5,8 @@ Konffitiedostot MagicMirror (https://magicmirror.builders) projektiin (kts. [kuv
 
 - [ ] näytön ajastus pois yön ajaksi
 - [ ] possibly kellon ja weathernowforecast fonttia isommaks
-- [ ] Philips Hue integrointi
+- [ ] Philips Hue integrointi (MMM-Hue muokattuna kontrolleilla)
+- [ ] Alexa integrointi
 - [ ] dokumentaation parantaminen
 - [x] MMM-Hsl-stops HTTP korjaaminen
 - [x] Spotify UI
