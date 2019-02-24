@@ -18,6 +18,18 @@ Ladattu MagicMirror2 käyttäen skriptiä https://magicmirror.builders/.
 
 ## Configuring
 
+### Screensaver pois
+
+Kokeiltu summamutikassa https://www.raspberrypi.org/forums/viewtopic.php?f=91&t=57552.
+
+Kopioi repon file lightdm.conf polkuun /etc/lightdm/lightdm.conf TAI lisää itse puuttuva rivi [Seat:*] alle
+```
+sudo cp lightdm.conf /etc/lightdm/lightdm.conf
+#TAI lisää itse rivi samaan tiedostoon [Seat:*] alle:
+xserver-command=X -s 0 dpms
+```
+JA reboot.
+
 ### HSL pysäkit
 
 Ladattu HSL moduuli https://github.com/0EQUALIZERO/MMM-Hsl-stops
@@ -34,7 +46,7 @@ npm install
 
 __________
 TODO 
-- screen saver pois päältä
+- korjattava HSL moduulin ajat sekä HTTP-ongelma (https://github.com/0EQUALIZERO/MMM-Hsl-stops/pull/2)
 - spotify presonal tweak (UI styling)
 - possibly kellon ja weathernowforecast fonttia isommaks
 - herpsderps
