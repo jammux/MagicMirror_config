@@ -17,7 +17,9 @@ sudo apt upgrade
 Ladattu MagicMirror2 käyttäen skriptiä https://magicmirror.builders/.
 
 ##Configuring
+
 ###HSL pysäkit
+
 Ladattu HSL moduuli https://github.com/0EQUALIZERO/MMM-Hsl-stops
 - konfiguroitu käyttämään koko suomen reittiopasta HSL sijasta
 - korjattu ikonit toimimaan korjaamalla hsl_stops.js (LISÄTTY REPOON 24.2.2019) 
