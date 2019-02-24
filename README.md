@@ -1,5 +1,7 @@
 # MagicMirror_config
-Conffi tiedostot MagicMirror
+Konffitiedostot MagicMirror projektiin. Toimii myös infoscreeninä esim. Raspberry Pi virallisen näytön kanssa.
+
+
 
 ## Setup
 Asennettu viimeisin Raspbian Stretch with Desktop, ei recommended software https://www.raspberrypi.org/downloads/raspbian/.
@@ -20,6 +22,7 @@ sudo apt upgrade
 Ladattu MagicMirror2 käyttäen skriptiä https://magicmirror.builders/.
 
 ## Configuring
+Konffi-kohdat viittaavat tiedostoon ~/MagicMirror/config/config.js.
 
 ### Screensaver pois
 
@@ -67,8 +70,26 @@ npm install
                         }
                 },
 ```
+### Spotify Nyt Soi
+aka MMM-NowPlayingOnSpotify (https://github.com/raywo/MMM-NowPlayingOnSpotify)
+```bash
+cd ~/MagicMirror/modules
+git clone https://github.com/raywo/MMM-NowPlayingOnSpotify.git
+cd MMM-NowPlayingOnSpotify
+npm install
+```
+#### Konffi
+Täytyy mennä https://developer.spotify.com/dashboard/ ja luoda uusi app. Appille pitää asettaa http://localhost:8080/callback Redirect URIksi.
+Ota talteen ClientID ja ClientSecret.
+Tee seuraava VNC:llä tai RasPin näppis+näyttö yhdistelmällä.
+```bash
+cd authorization
+node app
+#Selain avautuu, syötä ClientID ja clientSecret. Pyytää vielä kirjautumaan spotifyyn.
+#Saat konffin lopuksi, mikä pitää syöttää ~/MagicMirror/config/config.js
+```
 
-### Spotify Tweaking
+#### Spotify Twaking
 
 Spotify UI paranneltu kun module ei ole käytössä 
 - Modulen käynnistyksen aikana oleva logo poistettu
@@ -117,6 +138,7 @@ __________
 TODO 
 - korjattava HSL moduulin ajat sekä HTTP-ongelma (https://github.com/0EQUALIZERO/MMM-Hsl-stops/pull/2)
 - spotify presonal tweak (UI styling)
+- näytön ajastus pois yön ajaksi
 - possibly kellon ja weathernowforecast fonttia isommaks
 - herpsderps
 
