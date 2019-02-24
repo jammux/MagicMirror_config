@@ -1,11 +1,12 @@
 # MagicMirror_config
-Konffitiedostot MagicMirror (https://magicmirror.builders) projektiin. Toimii myös infoscreeninä esim. Raspberry Pi virallisen näytön kanssa.
+Konffitiedostot MagicMirror (https://magicmirror.builders) projektiin (kts. [kuva 1680x1050](Esimerkki.png)). Toimii myös infoscreeninä esim. Raspberry Pi virallisen näytön kanssa.
 
 ### TODO 
 
 - [ ] näytön ajastus pois yön ajaksi
 - [ ] possibly kellon ja weathernowforecast fonttia isommaks
-- [ ] Philips Hue integrointi
+- [ ] Philips Hue integrointi (MMM-Hue muokattuna kontrolleilla)
+- [ ] Alexa integrointi
 - [ ] dokumentaation parantaminen
 - [x] MMM-Hsl-stops HTTP korjaaminen
 - [x] Spotify UI
@@ -36,7 +37,7 @@ network={
 #network={...
 ```
 
-Ladattu MagicMirror2 käyttäen skriptiä https://magicmirror.builders/.
+Ladattu MagicMirror2 käyttäen skriptiä https://magicmirror.builders/. Asennettu pm2 myös.
 
 ## Configuring
 Konffi-kohdat viittaavat tiedostoon ~/MagicMirror/config/config.js.
@@ -221,6 +222,7 @@ nano ~/MagicMirror/installers/mm.sh
 #mm.sh tiedosto seuraavanlaiseksi
 cd ~/MagicMirror
 DISPLAY=:0 node clientonly --address 10.0.0.117 --port 8080
+
 #Lisäksi täytyy luoda serverille oma tiedosto
 nano ~/MagicMirror/installers/server.sh
 #server.sh
@@ -231,9 +233,10 @@ node serveronly
 #### pm2 konffin muuttaminen
 Erikseen suoritettuina myös serverin pitää käynnistyä pm2:n avulla.
 ```bash
-pm2 delete all
+pm2 delete all #poistetaan kaikki olemassaolevat
 pm2 start ~/MagicMirror/installers/server.sh --watch /home/pi/MagicMirror/
 #watch komento seuraa, jos muutoksia tapahtuu ja siten käynnistää sovelluksen uusiksi
+
 #client myös
 pm2 start ~/MagicMirror/installers/mm.sh --watch /home/pi/MagicMirror/
 pm2 save
@@ -241,3 +244,13 @@ pm2 save
 pm2 startup
 ```
 Nyt voi avata esimerkiksi tietokoneella **Chromella** osoitteen `http://raspinIP:8080`.
+
+### Borderit pois
+Rasittavat borderit, otetaan ne pois (säädä tarpeen mukaan) paikassa `~/MagicMirror/css/custom.css` lisäämällä seuraava.
+```css
+body {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+}
+```
