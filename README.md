@@ -244,3 +244,13 @@ pm2 save
 pm2 startup
 ```
 Nyt voi avata esimerkiksi tietokoneella **Chromella** osoitteen `http://raspinIP:8080`.
+
+### Borderit pois
+Rasittavat borderit, otetaan ne pois (säädä tarpeen mukaan) paikassa `~/MagicMirror/css/custom.css` lisäämällä seuraava.
+```css
+body {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+}
+```
