@@ -211,3 +211,33 @@ Halutaan vain IPv4 osoite
 
 ## Kuva
 ![Kuva käyttöliittymästä 1680x1050 resoluutioisella näytöllä](Esimerkki.png)
+
+## Ekstrat
+Ei suoraan toimintaan liittyvät kohdat.
+### Käyttöliittymän näyttäminen muilla koneilla
+Esim. tietokoneen sivunäytölle saa laitettua Mirrorin näkymän käynnistämällä erikseen server ja muokkaamalla itse mirrorin käynnistykseksi "clientonly".
+```bash
+nano ~/MagicMirror/installers/mm.sh
+#mm.sh tiedosto seuraavanlaiseksi
+cd ~/MagicMirror
+DISPLAY=:0 node clientonly --address 10.0.0.117 --port 8080
+#Lisäksi täytyy luoda serverille oma tiedosto
+nano ~/MagicMirror/installers/server.sh
+#server.sh
+cd ~/MagicMirror
+node serveronly
+```
+ Jotta muualta pääsee käsiksi RasPiin, niin `config.js` tiedostoon täytyy muokata kohta `address: "0.0.0.0"` sekä laittaa ipWhitelistiin lähiverkon osoite, esim. tietokoneen IP-osoite on 10.0.0.111, niin lisää `"10.0.0.0/24"`.
+#### pm2 konffin muuttaminen
+Erikseen suoritettuina myös serverin pitää käynnistyä pm2:n avulla.
+```bash
+pm2 delete all
+pm2 start ~/MagicMirror/installers/server.sh --watch /home/pi/MagicMirror/
+#watch komento seuraa, jos muutoksia tapahtuu ja siten käynnistää sovelluksen uusiksi
+#client myös
+pm2 start ~/MagicMirror/installers/mm.sh --watch /home/pi/MagicMirror/
+pm2 save
+#käynnistetään serveri ja käyttöliittymä myös bootissa
+pm2 startup
+```
+Nyt voi avata esimerkiksi tietokoneella **Chromella** osoitteen `http://raspinIP:8080`.
