@@ -203,7 +203,7 @@ Halutaan vain IPv4 osoite
 ```
 __________
 TODO 
-- spotify presonal tweak (UI styling)
+
 - näytön ajastus pois yön ajaksi
 - possibly kellon ja weathernowforecast fonttia isommaks
 - herpsderps
