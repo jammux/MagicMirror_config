@@ -43,6 +43,30 @@ npm install
 - korjattu ikonit toimimaan korjaamalla hsl_stops.js (LISÄTTY REPOON 24.2.2019) 
 - oman pysäkin löytää https://beta.digitransit.fi ottamalla pysäkin URLista numero %3A jälkeen
 
+### Spotify Tweaking
+
+Spotify UI paranneltu kun module ei ole käytössä 
+- Modulen käynnistyksen aikana oleva logo poistettu
+```
+cd ~/MagicMirror/modules/MMM-NowPlayingOnSpotify/css 
+nano css/styles
+#.NPOS_initContent
+display: none;
+
+cd ~/MagicMirror/modules/MMM-NowPlayingOnSpotify/css 
+nano css/styles
+#.NPOS_loading
+display: none;
+```	
+
+- Module ei käytössä logo poistetu
+```
+cd ~/MagicMirror/modules/MMM-NowPlayingOnSpotify/css 
+nano css/styles
+#.NPOS_nothingIsPlayingContent
+display: none;
+```
+
 
 __________
 TODO 
