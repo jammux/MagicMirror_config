@@ -18,6 +18,16 @@ Päivitetään Raspbian
 sudo apt update
 sudo apt upgrade 
 ```
+WiFin laittaminen, ettei tarvitse olla kaapelin päässä:
+```bash
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+#Lisää seuraava(t)
+network={
+	ssid="DemoLuola"		#wifin nimi
+	psk="Demopartyistaparhain"	#wifisalasana
+}
+#network={...
+```
 
 Ladattu MagicMirror2 käyttäen skriptiä https://magicmirror.builders/.
 
@@ -70,6 +80,26 @@ npm install
                         }
                 },
 ```
+
+### Sää
+Oletuksena mukana tulee OpenWeathermapia käyttävä tämän hetkinen sää ja ennuste.
+Käyttääkseen täytyy hakea API key https://home.openweathermap.org/users/sign_up joka syötetään configiin.
+Lisäksi voi hakea oman kaupunkinsa openweathermapista: esim. Helsinki: https://openweathermap.org/city/658225 eli 658225 on ID.
+#### Konffi
+```
+                {
+                        module: "weatherforecast",
+                        position: "top_left",
+                        header: "Weather Forecast",
+                        config: {
+                                location: "Helsinki",
+                                locationID: "658225",  //ID from https://openweathermap.org/city
+                                appid: "<APPID eli API KEY TÄHÄN>"
+                        }
+                },
+#ja sama myös currentweatherille
+```
+
 ### Spotify Nyt Soi
 aka MMM-NowPlayingOnSpotify (https://github.com/raywo/MMM-NowPlayingOnSpotify)
 ```bash
@@ -89,7 +119,7 @@ node app
 #Saat konffin lopuksi, mikä pitää syöttää ~/MagicMirror/config/config.js
 ```
 
-#### Spotify Twaking
+#### Spotify Tweaking
 
 Spotify UI paranneltu kun module ei ole käytössä 
 - Modulen käynnistyksen aikana oleva logo poistettu
