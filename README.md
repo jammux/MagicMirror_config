@@ -49,12 +49,15 @@ JA reboot.
 ### HSL pysäkit
 
 Näyttää oman pysäkin lähtöajat reaaliajassa. Ladattu HSL moduuli https://github.com/0EQUALIZERO/MMM-Hsl-stops.
-- korjattu ikonit toimimaan korjaamalla hsl_stops.js (LISÄTTY REPOON 24.2.2019) 
+- korjattu ikonit toimimaan korjaamalla hsl_stops.js (LISÄTTY REPOON 24.2.2019) [alkuperäinen PR](https://github.com/0EQUALIZERO/MMM-Hsl-stops/pull/1/files)
+- korjattu modulen kaatuminen jos HSL palauttaa virhekoodin kopioimalla repossa oleva node_helper.js MMM-Hsl-stops/node_helper.js. [alkuperäinen PR](https://github.com/0EQUALIZERO/MMM-Hsl-stops/pull/2/files)
 ```bash
 cd ~/MagicMirror/modules
 git clone https://github.com/0EQUALIZERO/MMM-Hsl-stops.git
 cd MMM-Hsl-stops
 npm install
+wget -q https://raw.githubusercontent.com/jammux/MagicMirror_config/master/hsl_stops.js -O ./hsl_stops.js
+wget -q https://raw.githubusercontent.com/jammux/MagicMirror_config/master/node_helper.js -O ./node_helper.js
 ```
 #### Konffi
 - konfiguroitu käyttämään koko suomen reittiopasta HSL sijasta (kts. konffi), [alkuperäinen PR](https://github.com/0EQUALIZERO/MMM-Hsl-stops/pull/3)
