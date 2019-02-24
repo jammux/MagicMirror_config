@@ -1,0 +1,67 @@
+/* SPOTIFY */
+.NPOS_nothingIsPlayingImage{
+    display: none;
+    }
+    .NPOS_coverArtArea{
+    margin-bottom: -80px;
+    position: relative;
+    }
+    .NPOS_coverArtArea:before{
+    content: '';
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1));
+    height: 70%;
+    width: 100%;
+    position: absolute; bottom: 0; left: 0;
+    z-index: 9;
+    }
+    .NPOS_coverArtArea .NPOS_albumCover{
+    border-radius: 2px;
+    position: relative;
+    display: block;
+    }
+    .NPOS_infoText{
+    position: relative;
+    z-index: 10;
+    margin: 0 10px;
+    }
+    .NPOS_infoText:nth-child(2){
+    font-weight: 600;
+    font-size: 150%;
+    margin-bottom: 5px;
+    }
+    .NPOS_infoText:nth-child(3){
+    font-weight: 400;
+    font-size: larger;
+    }
+    .NPOS_infoText:nth-child(4){
+    margin-top: 10px;
+    font-size: smaller;
+    }
+    .NPOS_infoText:nth-child(5){
+    font-weight: 600;
+    font-size: smaller;
+    margin-top: 10px;
+    text-align: center;
+    max-width: 100%;
+    }
+    .NPOS_infoText:nth-child(7){
+    font-weight: 600;
+    font-size: smaller;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    max-width: 100%;
+    }
+    .NPOS_infoText .NPOS_icon{
+    display: none;
+    }
+    progress.NPOS_progress{
+    border: none;
+    background: rgba(255,255,255,.2);
+    border-radius: 4px;
+    display: block;
+    position: relative;
+    }
+    progress.NPOS_progress::-webkit-progress-value{
+        border-radius: 4px;
+    }
