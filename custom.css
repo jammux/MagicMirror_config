@@ -83,3 +83,20 @@
     height: 99%;
     width: 99%;
     }
+    /*weather_celcius*/
+
+    span.bright{
+        font-size: 100px;
+        line-height: 100px;
+    }
+
+    /*Bus_stop_nickname*/
+
+    .stopName.bright{
+        font-size: 55px;
+    }
+
+    span.stopCode.dimmed{
+        font-size: 20px;
+        vertical-align: middle;
+    }
