@@ -210,6 +210,39 @@ Halutaan vain IPv4 osoite
                 },
 ```
 
+### Hue tilan näyttäminen
+Näyttää Philips Hue-siltaan liitettyjen lamppujen tilan oletuksena. Ladattu [MMM-Hue](https://github.com/MitchSS/MMM-Hue).
+
+Rasittavasti Philips vaatii developer-portaaliin tunnusten luonnin, mihin myös MMM-Hue viittaa.
+
+Simppelimmin ilman developertunnuksia:
+1. avaa Hue-sillalle debugkonsoli http://huesillanIP/debug/clip.html
+2. URL kohtaan /api ja Message Bodyyn kirjoita {"devicetype":"my_hue_app#raspi"} ja paina POST
+3. silta valittaa ettei nappulaa ole painettu. Käy painamassa nappulaa Hue sillassa.
+4. paina uudelleen POST ja saat vastauksena seuraavan näköisen tekstinpätkän, josta voit kaivaa MMM-Huen vaativan userid:n:
+```json
+[
+	{
+		"success": {
+			"username": "123456789abcdef-123456789123456789abcde"
+		}
+	}
+]
+```
+#### Konffi
+
+```
+{
+	module: 'MMM-Hue',
+	position: 'top_right',
+        config:{
+                bridgeip: "192.168.1.2", //huesillan ip
+                userid: "123456789abcdef-123456789123456789abcde", //userid
+                colour: false
+        }
+},
+```
+
 ## Kuva
 ![Kuva käyttöliittymästä 1680x1050 resoluutioisella näytöllä](Esimerkki.png)
 
